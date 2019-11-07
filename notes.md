@@ -17,3 +17,12 @@ For the `animals` the client wants to record:
 
 Determine the database tables necessary to track this information.
 Label any relationships between table.
+
+
+## A good data model
+
+- caotures ALL the information the system needs
+- captures ONLY the information the system needs. 
+- reflects rea;iyu )from the point of view of the system)
+- is flexible, can evolve with the system.
+- guarantee 'data integretity', without sacrficing too much performance.
