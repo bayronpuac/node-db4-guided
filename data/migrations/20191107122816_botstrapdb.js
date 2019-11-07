@@ -24,6 +24,7 @@ exports.up = function(knex) {
     .createTable('animal_zoos', tbl => {
         tbl.increments();
         tbl.interger('zoo_id')
+        tbl.string('name', 255).notNullable()
         .unsigned()
         .reference('id')
         .inTable('zoos')
@@ -43,5 +44,9 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  
+  return knex.schema
+  .dropTableExists('animal_zoos')
+  .dropTableExists('zoos')
+  .dropTableExists('animals')
+  .dropTableExists('species')
 };
